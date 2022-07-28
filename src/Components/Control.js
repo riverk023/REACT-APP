@@ -7,15 +7,15 @@ class Control extends Component {
             <li><a href="/create" onClick={function(e){
               e.preventDefault();
               this.props.onChangeMode('create');
-            }}>create</a></li>
+            }.bind(this)}>create</a></li>
             <li><a href="/update" onClick={function(e){
               e.preventDefault();
               this.props.onChangeMode('update');
-            }}>update</a></li>
+            }.bind(this)}>update</a></li>
             <li><input onClick={function(e){
               e.preventDefault();
               this.props.onChangeMode('delete');
-            }} type="button" value="delete"></input></li>
+            }.bind(this)} type="button" value="delete"></input></li>
         </ul>
       );
     }
